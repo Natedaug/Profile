@@ -1,0 +1,693 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles 
+   ========================================================================== */
+@font-face{
+    font-family:ProximaNovaLight;
+    font-weight:normal;
+    src:url("fonts/ProximaNova-Light.otf") format("opentype");
+}
+
+@font-face{
+    font-family:ProximaNovaBold;
+    font-weight:bold;
+    src:url("fonts/ProximaNova-Bold.otf") format("opentype");
+}
+
+@font-face{
+    font-family:ProximaNovaSemibold;
+    font-weight:normal;
+    src:url("fonts/ProximaNova-Semibold.otf") format("opentype");
+}
+@font-face{
+    font-family:MuseoSlab;
+    font-weight:normal;
+    src:url("fonts/Museo Slab.otf") format("opentype");
+}
+
+body {
+    background:  #444948 url(../img/snowtree2.jpg) repeat-x center top fixed;
+    color: #f4f3f3;
+    font: normal 16px/24px "ProximaNovaLight", "Helvetica Neue", Helvetica, sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(219, 119, 119, 1);
+    text-shadow: -.5px -.5px rgba(219, 119, 119, .8);
+    font-weight: bold;
+    position: relative;
+    /*transition-property: border-bottom;
+    transition-duration: 1s;
+    transition-timing-function: linear;*/
+}
+p>a:after{
+    display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: rgba(219, 119, 119, .5);
+  content: "";
+  transition: width 0.3s;
+}
+a:hover{
+    color: rgba(219, 119, 119, .5);
+    /*border-bottom: 1px solid;*/
+}
+p>a:hover:after{
+    width: 100%;
+}
+header {
+    height: 526px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header .avatar {
+    display: block;
+    border-radius: 50%;
+    width: 100px;
+    height: 140px;
+    margin: 0 auto;
+    border: .5px solid black;
+    box-shadow: -1px -1px 5px rgba(219, 119, 119, 0.69), 1px 1px 5px rgba(219, 119, 119, 0.69);
+    -webkit-animation-name: pulse;
+        -moz-animation-name: pulse;
+        -o-animation-name: pulse;
+        animation-name: pulse;
+
+    -webkit-animation-delay: 5s;
+         -moz-animation-delay: 5s;
+           -o-animation-delay: 5s;
+              animation-delay: 5s;
+
+    -webkit-animation-duration: 1s;
+       -moz-animation-duration: 1s;
+         -o-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+header h2 {
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    display: block;
+    font-size: 3em;
+    line-height: 1em;
+    padding: 20px 0px 0px 0px;
+    margin: 0px;
+    font-family: "MuseoSlab", "Helvetica Neue", Helvetica, sans-serif;
+    text-shadow: -1px -1px rgba(219, 119, 119, 0.69);
+   
+}
+header h2 span.name {
+     -webkit-animation-name: pulse;
+        -moz-animation-name: pulse;
+        -o-animation-name: pulse;
+        animation-name: pulse;
+
+    -webkit-animation-delay: 2.5s;
+         -moz-animation-delay: 2.5s;
+           -o-animation-delay: 2.5s;
+              animation-delay: 2.5s;
+
+    -webkit-animation-duration: 1s;
+       -moz-animation-duration: 1s;
+         -o-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+header h2 span.jobTitle {
+    display: block;
+    font-size: 20px;
+    padding-top: 20px;
+    font-weight: bold;
+
+    color: rgba(38, 43, 42, 1.0);/*rgba(255,255,255,0.6);*/
+    text-shadow: -.5px -.5px rgba(219, 119, 119, 0.69);
+    /*font-family: ProximaNovaLight;*/
+    letter-spacing: 0.2em;
+     -webkit-animation-name: pulse;
+        -moz-animation-name: pulse;
+        -o-animation-name: pulse;
+        animation-name: pulse;
+
+    -webkit-animation-delay: 3.5s;
+         -moz-animation-delay: 3.5s;
+           -o-animation-delay: 3.5s;
+              animation-delay: 3.5s;
+
+    -webkit-animation-duration: 1s;
+       -moz-animation-duration: 1s;
+         -o-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+header .nathan {
+     background: linear-gradient(to right, rgba(255,255,255,0.0), rgba(255,255,255,0.6), rgba(255,255,255,0.0));
+    margin-top: 150px;
+    padding-top: 10px;
+    -webkit-animation-name: bounceInDown;
+        -moz-animation-name: bounceInDown;
+        -o-animation-name: bounceInDown;
+        animation-name: bounceInDown;
+
+    -webkit-animation-delay: 1s;
+         -moz-animation-delay: 1s;
+           -o-animation-delay: 1s;
+              animation-delay: 1s;
+
+    -webkit-animation-duration: 1s;
+       -moz-animation-duration: 1s;
+         -o-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+       -moz-animation-fill-mode: both;
+         -o-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+header .social {
+    text-align: center;
+    padding-top: 0;
+}
+header .social a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-indent: -999em;
+    -webkit-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: center;
+    border: 0;
+    box-shadow: -1px -2px 5px rgba(219, 119, 119, 0.69);
+    -webkit-transition: all .2s ease-in-out; /* For Safari 3.1 to 6.0 */
+    transition: all .2s ease-in-out;
+}
+
+header .social a.email    { background-image: url(../img/e_mail.png); }
+header .social a.github   { background-image: url(../img/GitHub-Mark-64px.png); }
+
+#container {
+    margin: 526px auto 0 auto;
+    width: 100%;
+    background: #fff;
+    color: #444948;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    z-index: 3;
+    padding-top: 20px;
+}
+
+.portfolio {
+    width: 780px;
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 40px;
+    
+}
+
+#container h2 {
+    border-bottom: 1px solid #f4f3f3;
+    display: block;
+    width: 100%;
+    font-size: 0.8em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 20px 0;
+    font-family: "MuseoSlab", "Helvetica Neue", Helvetica, sans-serif;
+    height: 50px;
+}
+
+#container h2 span {
+    margin: 0;
+    display: block;
+    width: 780px;
+    margin: 0 auto;
+}
+
+#container h2 span em {
+    border-bottom: 1px solid #444948;
+    font-style: normal;
+    display: inline-block;
+    padding: 20px 0;
+    height: 10px;
+}
+
+#container h2 span em.lefty { float: left; }
+#container h2 span em.righty { float: left; margin-left: 380px; }
+
+.portfolio section.column {
+    width: 375px;
+    float: left;
+    overflow: hidden;
+}
+.portfolio section.column2 {
+    width: 250px;
+    float: left;
+    overflow: hidden;
+}
+
+
+
+.column2 img{
+    max-width: 245px;
+    padding-top: 5px;
+}
+.dyno{
+    height: 60px;
+    display: inline-block;
+}
+
+#container h2.skillHead2{
+    display: none;
+}
+/* From animate.css */
+@-webkit-keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(-2000px);
+    }
+    
+    60% {
+        opacity: 1;
+        -webkit-transform: translateY(30px);
+    }
+    
+    80% {
+        -webkit-transform: translateY(-10px);
+    }
+    
+    100% {
+        -webkit-transform: translateY(0);
+    }
+}
+
+@-moz-keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        -moz-transform: translateY(-2000px);
+    }
+    
+    60% {
+        opacity: 1;
+        -moz-transform: translateY(30px);
+    }
+    
+    80% {
+        -moz-transform: translateY(-10px);
+    }
+    
+    100% {
+        -moz-transform: translateY(0);
+    }
+}
+
+@-o-keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        -o-transform: translateY(-2000px);
+    }
+    
+    60% {
+        opacity: 1;
+        -o-transform: translateY(30px);
+    }
+    
+    80% {
+        -o-transform: translateY(-10px);
+    }
+    
+    100% {
+        -o-transform: translateY(0);
+    }
+}
+
+@keyframes bounceInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-2000px);
+    }
+    
+    60% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+    
+    80% {
+        transform: translateY(-10px);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+@media only screen and (max-width: 640px) {
+    .portfolio, 
+    .portfolio .column,
+    .portfolio .column2,
+    footer,
+    #contact form,
+    #container,
+    #container h2 span { width: 100%; box-sizing: border-box; }
+
+    #container { 
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 0; 
+    }
+    .portfolio section.column,
+    .portfolio section.column2 { 
+        margin: 0 auto; 
+        text-align: center;
+        float: none; 
+    }
+    #container h2.skillHead2{
+        display: block;
+    }
+    .dyno,
+    #container h2 span em.skillHead1{
+        display: none;
+    }
+    header .nathan { margin-top: 75px; }
+    footer { padding-top: 0; padding-bottom: 10px; }
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
