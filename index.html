@@ -11,9 +11,8 @@
         <link rel="icon" type="image/ico" href="favicon.ico">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="css/main.min.css">
+       
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -23,7 +22,7 @@
         <!-- Add your site or application content here -->
         <header id="top">
 
-            <div class="nathan">
+            <div id="nathan">
             
                 <img class="avatar" src="img/nate.jpg" alt="Nathan Pic" />
 
@@ -40,7 +39,7 @@
 
         </header>
 
-        <div id="container">
+        <div class="container">
 
             <h2><span><em class="lefty">BIO</em><em class="righty skillHead1">SKILLS</em></span></h2>
 
@@ -102,11 +101,16 @@
                 <footer><em>Contact me at <a href="mailto:NathanAKroenung@gmail.com">NathanAKroenung@gmail.com</a></em><em> <img class="dyno" src="img/dynodaug.png"></em></footer>
             </section>
         </div>
+        
+        <script>
+            var nathan = document.getElementById('nathan'), bod = document.body;
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+            window.onscroll = function() {
+                var pos = bod.scrollTop;
+                var parallax = 90 + parseInt(pos * -0.3) + 'px';
+                nathan.style.marginTop = parallax;      
+            };
+        </script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -115,7 +119,7 @@
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+            ga('create','UA-66845550-1','auto');ga('send','pageview');
         </script>
     </body>
 </html>
